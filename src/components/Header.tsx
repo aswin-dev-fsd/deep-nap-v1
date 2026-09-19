@@ -27,7 +27,7 @@ export default function Header() {
             </button>
 
             <Link href="/" className="flex items-center gap-space-md">
-              <div className="relative h-10 w-10 sm:w-32">
+              <div className="relative h-16 w-48 sm:w-64">
                 <Image
                   src="https://lh3.googleusercontent.com/aida/AEtjO1VyBxylK-3YX6ydgNoyvEM6k3-IYwrftv2b1w8EZrMNWwbDHEkLstP3lfwBQYP1yub851HDJgdj69RnCc64OvsOlfotAmwM0jeiG3r3KclvcXmNSot3s41ZFJkA9ARlDaOFKM6CiXAnoZ--JguVEs1FujkWc23g5XeMUT_lpDTLNShJWVF5bpfC9-QwBsj2RnpdQu3p6n7kbB65ZfiH0PV9rQCy9H-Rj2JXODC904x_wiaYDaSq-YvcUfWf"
                   alt="Deep Nap Mattress Logo"
@@ -35,9 +35,6 @@ export default function Header() {
                   className="object-contain object-left"
                 />
               </div>
-              <span className="font-headline-sm text-headline-sm text-primary tracking-tight hidden sm:inline">
-                Deep Nap
-              </span>
             </Link>
           </div>
 
@@ -68,9 +65,6 @@ export default function Header() {
             <PrimaryButton className="!px-5 !py-2.5 !h-auto text-sm">
               Get a quote
             </PrimaryButton>
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-              <span className="material-symbols-outlined text-on-primary text-[18px]">person</span>
-            </div>
           </div>
         </div>
       </div>

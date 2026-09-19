@@ -45,9 +45,10 @@ const SecondaryButton = ({ href, children, className = "", ...props }: ButtonPro
   );
 };
 
-interface WhatsAppButtonProps extends Omit<ButtonProps, 'href'> {
+interface WhatsAppButtonProps extends Omit<ButtonProps, 'href' | 'children'> {
   phoneNumber?: string;
   message?: string;
+  children?: React.ReactNode;
 }
 
 const WhatsAppButton = ({ 
