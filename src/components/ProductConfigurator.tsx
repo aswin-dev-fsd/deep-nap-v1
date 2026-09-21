@@ -1,16 +1,23 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { MattressProduct } from "@/data/products";
 import { calculateIndicativePrice } from "@/actions/calculatePrice";
 
 export default function ProductConfigurator({ product }: { product: MattressProduct }) {
-  const [sizeType, setSizeType] = useState<"standard" | "custom">("standard");
+  const searchParams = useSearchParams();
+  const prefillSize = searchParams.get("prefillSize"); // e.g., "78x60"
+
+  const defaultLength = prefillSize ? parseInt(prefillSize.split("x")[0]) || 78 : 78;
+  const defaultWidth = prefillSize ? parseInt(prefillSize.split("x")[1]) || 60 : 60;
+  
+  const [sizeType, setSizeType] = useState<"standard" | "custom">(prefillSize ? "custom" : "standard");
   const [selectedThickness, setSelectedThickness] = useState<number>(6);
   
   // Custom size state
-  const [length, setLength] = useState<number>(78);
-  const [width, setWidth] = useState<number>(60);
+  const [length, setLength] = useState<number>(defaultLength);
+  const [width, setWidth] = useState<number>(defaultWidth);
   
   const [price, setPrice] = useState<number>(product.priceFrom);
 
@@ -158,10 +165,8 @@ export default function ProductConfigurator({ product }: { product: MattressProd
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-3">
         <Link 
-          href={`https://wa.me/919600889334?text=${encodeURIComponent(`Hi Deep Nap, I'm interested in the ${product.name}, ${sizeType === 'custom' ? `${length}x${width}` : 'Standard size'}, ${selectedThickness} inch. Indicative price Rs ${price.toLocaleString('en-IN')}. Could you confirm?`)}`}
+          href={`/quote?product=${encodeURIComponent(product.name)}&size=${encodeURIComponent(sizeType === 'custom' ? `${length}x${width}` : 'Standard size')}&thickness=${selectedThickness}&price=${price.toLocaleString('en-IN')}`}
           className="h-12 flex-1 rounded-lg bg-primary text-surface-white font-label-nav text-label-nav font-semibold flex items-center justify-center hover:bg-navy-deep transition-colors shadow-sm"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           Get a quote
         </Link>

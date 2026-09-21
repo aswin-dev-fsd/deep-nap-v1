@@ -40,13 +40,13 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-space-md">
-            <Link href="#" className="transition-colors bg-primary-container text-surface-white rounded-lg px-space-sm py-1.5 font-semibold">
+            <Link href="/mattresses" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
               Mattresses
             </Link>
-            <Link href="#" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
+            <Link href="/diwan-cots" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
               Diwan cots
             </Link>
-            <Link href="#" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
+            <Link href="/custom-size" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
               Custom size
             </Link>
             <Link href="#" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
@@ -62,9 +62,9 @@ export default function Header() {
             <div className="hidden sm:block">
               <WhatsAppButton />
             </div>
-            <PrimaryButton className="!px-5 !py-2.5 !h-auto text-sm">
+            <Link href="/quote" className="inline-flex items-center justify-center font-label-nav font-medium h-[48px] rounded-full transition-colors bg-primary text-surface-white hover:bg-navy-deep px-5 py-2.5 text-sm">
               Get a quote
-            </PrimaryButton>
+            </Link>
           </div>
         </div>
       </div>
@@ -87,13 +87,13 @@ export default function Header() {
               </button>
             </div>
             <nav className="flex flex-col p-4 gap-4">
-              <Link href="#" className="font-label-nav text-lg text-primary font-semibold" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/mattresses" className="font-label-nav text-lg text-primary font-semibold" onClick={() => setIsMobileMenuOpen(false)}>
                 Mattresses
               </Link>
-              <Link href="#" className="font-label-nav text-lg text-on-surface-variant" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/diwan-cots" className="font-label-nav text-lg text-on-surface-variant" onClick={() => setIsMobileMenuOpen(false)}>
                 Diwan cots
               </Link>
-              <Link href="#" className="font-label-nav text-lg text-on-surface-variant" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/custom-size" className="font-label-nav text-lg text-on-surface-variant" onClick={() => setIsMobileMenuOpen(false)}>
                 Custom size
               </Link>
               <Link href="#" className="font-label-nav text-lg text-on-surface-variant" onClick={() => setIsMobileMenuOpen(false)}>

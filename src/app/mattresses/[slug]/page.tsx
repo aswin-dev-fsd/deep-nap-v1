@@ -51,7 +51,9 @@ export default async function ProductDetailPage({
 
           {/* RIGHT - Configurator */}
           <div className="lg:col-span-5">
-            <ProductConfigurator product={product} />
+            <React.Suspense fallback={<div className="p-8 text-center text-primary font-label-nav">Loading configurator...</div>}>
+              <ProductConfigurator product={product} />
+            </React.Suspense>
           </div>
           
         </div>

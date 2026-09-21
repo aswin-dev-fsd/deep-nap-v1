@@ -57,11 +57,11 @@ export default function Footer() {
               Shop
             </div>
             <ul className="space-y-2.5 font-label-nav text-label-nav text-secondary-fixed/80">
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Latex Mattresses</Link></li>
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Pocket Spring</Link></li>
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Orthopaedic</Link></li>
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Diwan Cots</Link></li>
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Custom Size Builder</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/mattresses?type=Latex">Latex Mattresses</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/mattresses?type=Pocket+spring">Pocket Spring</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/mattresses?type=Orthopaedic">Orthopaedic</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/diwan-cots">Diwan Cots</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/custom-size">Custom Size Builder</Link></li>
             </ul>
           </div>
           

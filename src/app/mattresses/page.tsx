@@ -9,13 +9,29 @@ const categories: ProductCategory[] = ["Latex", "Pocket spring", "Orthopaedic", 
 
 export default function MattressesPage() {
   const [currentType, setCurrentType] = useState<ProductCategory | null>(null);
+  const [compareSlugs, setCompareSlugs] = useState<string[]>([]);
 
   const filteredProducts = currentType
     ? products.filter((p) => p.category === currentType)
     : products;
 
+  const handleCompareToggle = (slug: string) => {
+    setCompareSlugs((prev) => {
+      if (prev.includes(slug)) {
+        return prev.filter((s) => s !== slug);
+      }
+      if (prev.length >= 3) {
+        // Can't add more than 3
+        return prev;
+      }
+      return [...prev, slug];
+    });
+  };
+
+  const selectedProducts = products.filter(p => compareSlugs.includes(p.slug));
+
   return (
-    <main className="w-full bg-surface min-h-screen">
+    <main className="w-full bg-surface min-h-screen relative pb-20">
       {/* Header Area */}
       <div className="w-full bg-[#EFE5D7] pt-12 pb-8 px-gutter md:px-gutter-tablet lg:px-gutter-desktop">
         <div className="max-w-[1280px] mx-auto">
@@ -67,68 +83,86 @@ export default function MattressesPage() {
       <div className="max-w-[1280px] mx-auto px-gutter md:px-gutter-tablet lg:px-gutter-desktop py-12 md:py-20">
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="bg-surface-white rounded-xl border border-hairline overflow-hidden flex flex-col group hover:shadow-md transition-shadow">
-                
-                <div className="relative w-full aspect-[4/3] bg-surface-container">
-                  {product.isBestSeller && (
-                    <div className="absolute top-4 left-4 z-10 bg-[#F3E3C2] text-primary px-3 py-1 rounded-full font-caption text-caption font-semibold">
-                      Best seller
-                    </div>
-                  )}
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover object-center"
-                  />
-                </div>
+            {filteredProducts.map((product) => {
+              const isSelected = compareSlugs.includes(product.slug);
+              
+              return (
+                <div key={product.id} className="bg-surface-white rounded-xl border border-hairline overflow-hidden flex flex-col group hover:shadow-md transition-shadow relative">
+                  
+                  {/* Compare Checkbox */}
+                  <div className={`absolute top-4 right-4 z-20 transition-opacity ${isSelected ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+                    <label className="flex items-center gap-2 bg-surface-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm cursor-pointer border border-hairline hover:border-primary transition-colors">
+                      <input 
+                        type="checkbox" 
+                        checked={isSelected}
+                        onChange={() => handleCompareToggle(product.slug)}
+                        disabled={!isSelected && compareSlugs.length >= 3}
+                        className="w-4 h-4 rounded border-hairline text-primary focus:ring-primary cursor-pointer disabled:opacity-50"
+                      />
+                      <span className="font-caption text-caption text-primary font-medium">Compare</span>
+                    </label>
+                  </div>
 
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="font-title-card text-title-card text-primary mb-1">{product.name}</h3>
-                  <p className="font-body-regular text-body-regular text-slate text-sm line-clamp-1 mb-4">{product.description}</p>
-                  
-                  <div className="w-full h-px bg-hairline mb-4"></div>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="font-caption text-caption text-slate uppercase tracking-wider">Firmness</div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden">
-                        <div 
-                          className="h-full bg-primary rounded-full" 
-                          style={{ width: `${(product.firmness / 10) * 100}%` }}
-                        ></div>
+                  <div className="relative w-full aspect-[4/3] bg-surface-container">
+                    {product.isBestSeller && (
+                      <div className="absolute top-4 left-4 z-10 bg-[#F3E3C2] text-primary px-3 py-1 rounded-full font-caption text-caption font-semibold">
+                        Best seller
                       </div>
-                      <span className="font-label-nav text-label-nav font-bold text-primary">{product.firmness}/10</span>
-                    </div>
+                    )}
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover object-center"
+                    />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div>
-                      <div className="font-caption text-caption text-slate uppercase tracking-wider mb-1">Thickness</div>
-                      <div className="font-label-nav text-label-nav font-semibold text-primary">{product.thicknesses}</div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="font-title-card text-title-card text-primary mb-1">{product.name}</h3>
+                    <p className="font-body-regular text-body-regular text-slate text-sm line-clamp-1 mb-4">{product.description}</p>
+                    
+                    <div className="w-full h-px bg-hairline mb-4"></div>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="font-caption text-caption text-slate uppercase tracking-wider">Firmness</div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden">
+                          <div 
+                            className="h-full bg-primary rounded-full" 
+                            style={{ width: `${(product.firmness / 10) * 100}%` }}
+                          ></div>
+                        </div>
+                        <span className="font-label-nav text-label-nav font-bold text-primary">{product.firmness}/10</span>
+                      </div>
                     </div>
-                    <div>
-                      <div className="font-caption text-caption text-slate uppercase tracking-wider mb-1">Warranty</div>
-                      <div className="font-label-nav text-label-nav font-semibold text-primary">{product.warranty}</div>
-                    </div>
-                  </div>
 
-                  <div className="mt-auto flex items-end justify-between pt-4 border-t border-hairline">
-                    <div>
-                      <div className="font-price-display text-price-display text-primary">₹{product.priceFrom.toLocaleString('en-IN')}</div>
-                      <div className="font-caption text-caption text-slate">indicative starting price</div>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div>
+                        <div className="font-caption text-caption text-slate uppercase tracking-wider mb-1">Thickness</div>
+                        <div className="font-label-nav text-label-nav font-semibold text-primary">{product.thicknesses}</div>
+                      </div>
+                      <div>
+                        <div className="font-caption text-caption text-slate uppercase tracking-wider mb-1">Warranty</div>
+                        <div className="font-label-nav text-label-nav font-semibold text-primary">{product.warranty}</div>
+                      </div>
                     </div>
-                    <Link 
-                      href={`/mattresses/${product.slug}`}
-                      className="h-10 px-5 rounded-lg border border-primary text-primary font-label-nav text-label-nav font-semibold flex items-center justify-center hover:bg-primary hover:text-surface-white transition-colors"
-                    >
-                      View details
-                    </Link>
+
+                    <div className="mt-auto flex items-end justify-between pt-4 border-t border-hairline">
+                      <div>
+                        <div className="font-price-display text-price-display text-primary">₹{product.priceFrom.toLocaleString('en-IN')}</div>
+                        <div className="font-caption text-caption text-slate">indicative starting price</div>
+                      </div>
+                      <Link 
+                        href={`/mattresses/${product.slug}`}
+                        className="h-10 px-5 rounded-lg border border-primary text-primary font-label-nav text-label-nav font-semibold flex items-center justify-center hover:bg-primary hover:text-surface-white transition-colors"
+                      >
+                        View details
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         ) : (
           <div className="text-center py-20 bg-surface-white rounded-xl border border-hairline px-6">
@@ -156,6 +190,53 @@ export default function MattressesPage() {
       </div>
 
       <CustomSizeBuilder />
+
+      {/* Compare Tray */}
+      {compareSlugs.length > 0 && (
+        <div className="fixed bottom-0 left-0 right-0 bg-surface-white border-t border-hairline shadow-[0_-4px_20px_rgba(0,0,0,0.08)] z-40 transform transition-transform animate-in slide-in-from-bottom-8">
+          <div className="max-w-[1280px] mx-auto px-gutter md:px-gutter-tablet lg:px-gutter-desktop py-4 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <span className="font-label-nav text-slate hidden md:inline-block">
+                Comparing {compareSlugs.length} of 3
+              </span>
+              <div className="flex gap-2">
+                {selectedProducts.map((p) => (
+                  <div key={p.id} className="relative w-12 h-12 md:w-16 md:h-16 rounded border border-hairline overflow-hidden group">
+                    <Image src={p.image} alt={p.name} fill className="object-cover" />
+                    <button 
+                      onClick={() => handleCompareToggle(p.slug)}
+                      className="absolute inset-0 bg-ink/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    >
+                      <span className="material-symbols-outlined text-surface-white text-sm">close</span>
+                    </button>
+                  </div>
+                ))}
+                {/* Empty slots placeholders */}
+                {Array.from({ length: 3 - compareSlugs.length }).map((_, i) => (
+                  <div key={`empty-${i}`} className="w-12 h-12 md:w-16 md:h-16 rounded border border-dashed border-hairline flex items-center justify-center bg-surface">
+                    <span className="material-symbols-outlined text-slate/40">add</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-4">
+              <button 
+                onClick={() => setCompareSlugs([])} 
+                className="font-label-nav text-primary underline hidden sm:block"
+              >
+                Clear
+              </button>
+              <Link 
+                href={`/compare?m=${compareSlugs.join(',')}`}
+                className="h-10 md:h-12 px-5 md:px-8 bg-primary text-surface-white rounded-lg font-label-nav font-semibold flex items-center justify-center hover:bg-navy-deep transition-colors shadow-sm"
+              >
+                Compare {compareSlugs.length} {compareSlugs.length === 1 ? 'mattress' : 'mattresses'}
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

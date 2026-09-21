@@ -17,6 +17,8 @@ export interface MattressProduct {
   image: string;
   coreMaterial: string;
   comfortLayer: string;
+  buildTime: string;
+  breathability: string;
 }
 
 export const products: MattressProduct[] = [
@@ -38,6 +40,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "Individually encased pocket springs",
     comfortLayer: "100% pin-core natural latex",
+    buildTime: "4-6 days",
+    breathability: "High",
   },
   {
     id: "prod-02",
@@ -55,6 +59,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "High-density natural latex block",
     comfortLayer: "Plush natural latex",
+    buildTime: "4-6 days",
+    breathability: "High",
   },
   {
     id: "prod-03",
@@ -72,6 +78,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "Rubberised coir block",
     comfortLayer: "Natural latex",
+    buildTime: "3-5 days",
+    breathability: "Very High",
   },
 
   // Pocket Spring
@@ -91,6 +99,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "Pocket springs",
     comfortLayer: "HR foam euro-top",
+    buildTime: "5-7 days",
+    breathability: "Medium",
   },
   {
     id: "prod-05",
@@ -108,6 +118,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "Zoned pocket springs",
     comfortLayer: "High-resilience foam",
+    buildTime: "5-7 days",
+    breathability: "Medium",
   },
 
   // Orthopaedic
@@ -128,6 +140,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "High-density rebonded foam",
     comfortLayer: "Soft HR foam (Side A) / Firm foam (Side B)",
+    buildTime: "3-5 days",
+    breathability: "Low",
   },
   {
     id: "prod-07",
@@ -145,6 +159,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "Rebonded foam block",
     comfortLayer: "Quilted cotton fabric",
+    buildTime: "3-5 days",
+    breathability: "Low",
   },
 
   // Memory Foam
@@ -164,6 +180,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "High-resilience support foam",
     comfortLayer: "Gel-infused memory foam",
+    buildTime: "4-6 days",
+    breathability: "Medium",
   },
   {
     id: "prod-09",
@@ -181,6 +199,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "Pocket springs",
     comfortLayer: "Memory foam",
+    buildTime: "5-7 days",
+    breathability: "Low",
   },
   {
     id: "prod-10",
@@ -198,6 +218,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "PU foam",
     comfortLayer: "Standard memory foam",
+    buildTime: "3-5 days",
+    breathability: "Low",
   },
 
   // Coir
@@ -217,6 +239,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "Rubberised coir",
     comfortLayer: "Thin PU foam quilt",
+    buildTime: "2-4 days",
+    breathability: "Very High",
   },
   {
     id: "prod-12",
@@ -234,6 +258,8 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "Rebonded foam",
     comfortLayer: "High-density rubberised coir",
+    buildTime: "3-5 days",
+    breathability: "High",
   },
   {
     id: "prod-13",
@@ -251,5 +277,7 @@ export const products: MattressProduct[] = [
     image: "/images/placeholder-mattress.jpg",
     coreMaterial: "Basic rubberised coir",
     comfortLayer: "Cotton fabric",
+    buildTime: "2-4 days",
+    breathability: "Very High",
   },
 ];

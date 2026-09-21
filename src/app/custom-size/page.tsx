@@ -118,10 +118,8 @@ export default function CustomSizePage() {
             </div>
             
             <Link 
-              href={`https://wa.me/919600889334?text=${encodeURIComponent(`Hello, I would like to get a quote for a custom mattress (${length}x${width}x${thickness} inches).`)}`}
+              href={`/quote?product=Custom+Mattress&size=${length}x${width}&thickness=${thickness}&price=${price.toLocaleString('en-IN')}`}
               className="h-[52px] px-8 flex items-center justify-center bg-primary text-surface-white rounded-lg font-label-nav text-label-nav font-semibold hover:bg-navy-deep transition-all shadow-sm w-full md:w-auto flex-shrink-0 gap-2"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <span className="w-2 h-2 rounded-full bg-[#DCA544]"></span>
               Send this enquiry
