@@ -4,6 +4,12 @@ All notable changes to the Deep Nap project will be documented in this file.
 
 ## [2026-09-21]
 ### Added
+- **Mattress Finder Quiz (Phase 6):**
+  - Built a distraction-free, 5-step quiz wizard at `/quiz` with custom layout overrides (`ConditionalLayout`).
+  - Implemented a heuristic scoring engine that analyzes sleeper profile, sleep position, health concerns, firmness preference, and size to rank all 13 catalog mattresses.
+  - Designed interactive cards with Material Symbols, dynamic progress indicator, and smooth step navigation.
+  - Added dynamic recommendations screen highlighting top 3 matches with match rationale and direct WhatsApp consultation handoff.
+  - Added "Mattress Finder Quiz" navigation link in `Footer.tsx`.
 - **Diwan Cots Vertical (Phase 5):**
   - Created `src/data/cots.ts` with mock furniture data and specifications.
   - Built `/diwan-cots` collection page with Finish and Storage filters.

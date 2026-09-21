@@ -55,5 +55,12 @@ This document tracks all completed features, components, and pages built in the 
 - Hydrates selected product configurations directly from the URL.
 - On submit, formats all details into a clean string and opens a pre-filled WhatsApp conversation with the brand. No backend database required.
 
+### Mattress Finder Quiz (`/quiz`)
+- **Layout Override:** Uses `ConditionalLayout.tsx` to strip out the global Header and Footer, providing a distraction-free, full-screen wizard experience.
+- **State Machine:** Client-side React state tracking 5 steps (Who is it for, Sleep Position, Concerns, Firmness, Size).
+- **Interactive UI:** Large tappable cards utilizing Material Symbols for iconography and visual feedback on selection.
+- **Recommendation Engine:** A heuristic scoring algorithm that reads the user's answers and assigns weighted points to all 13 mattresses in the `products.ts` database (e.g. 'Back pain' boosts Ortho models, 'Sleep hot' boosts Latex/Coir).
+- **Results Screen:** Dynamically generates text explaining *why* a mattress was chosen, displays the top 3 matches, and features a CTA that formats all preferences and recommendations into a pre-filled WhatsApp lead-capture message.
+
 ---
 *Document last updated: September 21, 2026*

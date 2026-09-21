@@ -60,6 +60,7 @@ export default function Footer() {
               <li><Link className="hover:text-surface-white transition-colors" href="/mattresses?type=Latex">Latex Mattresses</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="/mattresses?type=Pocket+spring">Pocket Spring</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="/mattresses?type=Orthopaedic">Orthopaedic</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/quiz">Mattress Finder Quiz</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="/diwan-cots">Diwan Cots</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="/custom-size">Custom Size Builder</Link></li>
             </ul>
