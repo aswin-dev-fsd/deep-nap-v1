@@ -4,6 +4,20 @@ All notable changes to the Deep Nap project will be documented in this file.
 
 ## [2026-09-21]
 ### Added
+- **B2B & Institutional Orders Vertical (Phase 7):**
+  - Built `/b2b` institutional procurement page tailored for hotels, hostels, hospitals, builders, and designers.
+  - Implemented `B2BForm` capturing organization details, buyer type, quantity, size schedules, and forwarding formatted BOQ inquiries to WhatsApp.
+- **Consultation Booking Flow (Phase 7):**
+  - Built `/book-consultation` supporting 3 distinct modes: 15-min Video Call, Coimbatore Home Visit, and Chinniyampalayam Unit Visit.
+  - Interactive appointment scheduler with automated WhatsApp dispatch.
+- **Our Manufacturing Page (Phase 7):**
+  - Built `/manufacturing` detailing the 6-stage production process, machinery capabilities, raw material sourcing, and factory transparency story.
+- **Visit the Unit & Showroom (Phase 7):**
+  - Built `/visit` with embedded interactive Google Maps, turn-by-turn Coimbatore airport road directions, opening hours, and visit booking form.
+- **Audit & Production Readiness Report:**
+  - Created `docs/audit_report.md` tracking strict prompt constraints and production deployment roadmap.
+- **Navigation Enhancements:**
+  - Connected Header and Footer links for `/b2b`, `/visit`, `/manufacturing`, and `/book-consultation`.
 - **Mattress Finder Quiz (Phase 6):**
   - Built a distraction-free, 5-step quiz wizard at `/quiz` with custom layout overrides (`ConditionalLayout`).
   - Implemented a heuristic scoring engine that analyzes sleeper profile, sleep position, health concerns, firmness preference, and size to rank all 13 catalog mattresses.

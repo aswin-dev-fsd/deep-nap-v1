@@ -62,6 +62,7 @@ export default function Footer() {
               <li><Link className="hover:text-surface-white transition-colors" href="/mattresses?type=Orthopaedic">Orthopaedic</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="/quiz">Mattress Finder Quiz</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="/diwan-cots">Diwan Cots</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/manufacturing">Our Manufacturing</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="/custom-size">Custom Size Builder</Link></li>
             </ul>
           </div>
@@ -72,10 +73,10 @@ export default function Footer() {
             </div>
             <ul className="space-y-2.5 font-label-nav text-label-nav text-secondary-fixed/80">
               <li><Link className="hover:text-surface-white transition-colors" href="#">FAQ</Link></li>
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Warranty Registration</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/warranty">Warranty Registration</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="#">Delivery & Installation</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="#">Care Guide</Link></li>
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Bulk & Institutional Orders</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/b2b">Bulk & Institutional Orders</Link></li>
             </ul>
           </div>
           
@@ -96,8 +97,8 @@ export default function Footer() {
                   Call: 96008 89334
                 </a>
               </li>
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Book a Consultation</Link></li>
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Visit the Unit</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/book-consultation">Book a Consultation</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/visit">Visit the Unit</Link></li>
             </ul>
           </div>
         </div>

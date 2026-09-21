@@ -49,10 +49,10 @@ export default function Header() {
             <Link href="/custom-size" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
               Custom size
             </Link>
-            <Link href="#" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
+            <Link href="/b2b" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
               Bulk orders
             </Link>
-            <Link href="#" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
+            <Link href="/visit" className="font-label-nav text-label-nav text-on-surface-variant hover:text-on-surface transition-colors py-1.5">
               Visit us
             </Link>
           </nav>
@@ -96,10 +96,10 @@ export default function Header() {
               <Link href="/custom-size" className="font-label-nav text-lg text-on-surface-variant" onClick={() => setIsMobileMenuOpen(false)}>
                 Custom size
               </Link>
-              <Link href="#" className="font-label-nav text-lg text-on-surface-variant" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/b2b" className="font-label-nav text-lg text-on-surface-variant" onClick={() => setIsMobileMenuOpen(false)}>
                 Bulk orders
               </Link>
-              <Link href="#" className="font-label-nav text-lg text-on-surface-variant" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/visit" className="font-label-nav text-lg text-on-surface-variant" onClick={() => setIsMobileMenuOpen(false)}>
                 Visit us
               </Link>
             </nav>

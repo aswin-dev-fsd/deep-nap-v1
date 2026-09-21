@@ -16,6 +16,7 @@ This document tracks all completed features, components, and pages built in the 
 - **ProductConfigurator:** Complex client-side pricing calculator for mattresses. Handles custom dimensions (LxW), standard sizes, and thickness permutations.
 - **CotConfigurator:** Furniture-specific variant selector handling wood finishes (image swatches), storage options, and installation fees.
 - **QuoteForm:** Structured form capturing customized specifications and forwarding formatted order inquiries via WhatsApp.
+- **B2BForm:** Comprehensive lead-capture form for institutional and bulk mattress requirements.
 - **CustomSizeBuilder:** Reusable form to generate leads for bespoke dimensions.
 
 ## 3. Completed Pages & Flows
@@ -61,6 +62,22 @@ This document tracks all completed features, components, and pages built in the 
 - **Interactive UI:** Large tappable cards utilizing Material Symbols for iconography and visual feedback on selection.
 - **Recommendation Engine:** A heuristic scoring algorithm that reads the user's answers and assigns weighted points to all 13 mattresses in the `products.ts` database (e.g. 'Back pain' boosts Ortho models, 'Sleep hot' boosts Latex/Coir).
 - **Results Screen:** Dynamically generates text explaining *why* a mattress was chosen, displays the top 3 matches, and features a CTA that formats all preferences and recommendations into a pre-filled WhatsApp lead-capture message.
+
+### Bulk & Institutional Orders (`/b2b`)
+- Institutional page for hotels, hostels, hospitals, builders, and designers.
+- Features value props (batch control, warranty, logistics) and the interactive `B2BForm` for BOQ lead generation.
+
+### Book a Consultation (`/book-consultation`)
+- Multi-channel consultation booking screen with 3 pathways (15-min Video Call, Coimbatore Home Visit, Chinniyampalayam Unit Visit).
+- Collects appointment preferences and formats instant WhatsApp scheduling requests.
+
+### Our Manufacturing Unit (`/manufacturing`)
+- Comprehensive factory tour page detailing the 6-stage construction process, machinery capabilities, and raw material sourcing.
+- Highlights direct manufacturer transparency and open-door unit policy.
+
+### Visit the Unit & Showroom (`/visit`)
+- Directions, hours, and interactive Google Maps embed for the Chinniyampalayam factory.
+- Direct booking form for scheduled factory visits.
 
 ---
 *Document last updated: September 21, 2026*
