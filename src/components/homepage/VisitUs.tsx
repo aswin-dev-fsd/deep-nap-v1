@@ -83,7 +83,7 @@ export default function VisitUs() {
           </div>
           
           <div className="flex justify-end">
-            <PrimaryButton href="#" className="w-full sm:w-auto">
+            <PrimaryButton href="/visit" className="w-full sm:w-auto">
               Book a store visit
             </PrimaryButton>
           </div>

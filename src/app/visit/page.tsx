@@ -36,7 +36,7 @@ Please confirm if this time works.`;
       {/* SECTION 1 - MAP */}
       <section className="w-full h-[400px] lg:h-[500px] bg-[#EFE5D7] relative">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3916.036814234032!2d77.06548777504546!3d11.035858089129524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857b2829b35fd%3A0x6b1cfb6a48f32e92!2sDeep%20Nap%20Mattress!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.14782012001!2d77.06208807572737!3d11.027532389137357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857ca0d555555%3A0x8e8ce12d6a57593c!2sChinniyampalayam%2C%20Coimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 
@@ -116,18 +116,18 @@ Please confirm if this time works.`;
           <div className="grid grid-cols-2 gap-4 h-full min-h-[400px]">
             <div className="flex flex-col gap-4">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[#EFE5D7]">
-                <Image src="https://lh3.googleusercontent.com/aida/AEtjO1VyBxylK-3YX6ydgNoyvEM6k3-IYwrftv2b1w8EZrMNWwbDHEkLstP3lfwBQYP1yub851HDJgdj69RnCc64OvsOlfotAmwM0jeiG3r3KclvcXmNSot3s41ZFJkA9ARlDaOFKM6CiXAnoZ--JguVEs1FujkWc23g5XeMUT_lpDTLNShJWVF5bpfC9-QwBsj2RnpdQu3p6n7kbB65ZfiH0PV9rQCy9H-Rj2JXODC904x_wiaYDaSq-YvcUfWf" alt="Shop Interior" fill className="object-cover" />
+                <Image src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&q=80&w=800" alt="Shop Interior" fill className="object-cover" />
               </div>
               <div className="relative flex-grow rounded-2xl overflow-hidden bg-[#EFE5D7] min-h-[150px]">
-                <Image src="https://lh3.googleusercontent.com/aida/AEtjO1VyBxylK-3YX6ydgNoyvEM6k3-IYwrftv2b1w8EZrMNWwbDHEkLstP3lfwBQYP1yub851HDJgdj69RnCc64OvsOlfotAmwM0jeiG3r3KclvcXmNSot3s41ZFJkA9ARlDaOFKM6CiXAnoZ--JguVEs1FujkWc23g5XeMUT_lpDTLNShJWVF5bpfC9-QwBsj2RnpdQu3p6n7kbB65ZfiH0PV9rQCy9H-Rj2JXODC904x_wiaYDaSq-YvcUfWf" alt="Materials Display" fill className="object-cover" />
+                <Image src="https://images.unsplash.com/photo-1634546592231-15582fcc978a?auto=format&fit=crop&q=80&w=800" alt="Materials Display" fill className="object-cover" />
               </div>
             </div>
             <div className="flex flex-col gap-4 pt-10">
               <div className="relative flex-grow rounded-2xl overflow-hidden bg-[#EFE5D7] min-h-[200px]">
-                <Image src="https://lh3.googleusercontent.com/aida/AEtjO1VyBxylK-3YX6ydgNoyvEM6k3-IYwrftv2b1w8EZrMNWwbDHEkLstP3lfwBQYP1yub851HDJgdj69RnCc64OvsOlfotAmwM0jeiG3r3KclvcXmNSot3s41ZFJkA9ARlDaOFKM6CiXAnoZ--JguVEs1FujkWc23g5XeMUT_lpDTLNShJWVF5bpfC9-QwBsj2RnpdQu3p6n7kbB65ZfiH0PV9rQCy9H-Rj2JXODC904x_wiaYDaSq-YvcUfWf" alt="Factory View" fill className="object-cover" />
+                <Image src="https://images.unsplash.com/photo-1581428982868-e410dd047a90?auto=format&fit=crop&q=80&w=800" alt="Factory View" fill className="object-cover" />
               </div>
               <div className="relative aspect-square rounded-2xl overflow-hidden bg-[#EFE5D7]">
-                <Image src="https://lh3.googleusercontent.com/aida/AEtjO1VyBxylK-3YX6ydgNoyvEM6k3-IYwrftv2b1w8EZrMNWwbDHEkLstP3lfwBQYP1yub851HDJgdj69RnCc64OvsOlfotAmwM0jeiG3r3KclvcXmNSot3s41ZFJkA9ARlDaOFKM6CiXAnoZ--JguVEs1FujkWc23g5XeMUT_lpDTLNShJWVF5bpfC9-QwBsj2RnpdQu3p6n7kbB65ZfiH0PV9rQCy9H-Rj2JXODC904x_wiaYDaSq-YvcUfWf" alt="Custom Beds" fill className="object-cover" />
+                <Image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800" alt="Custom Beds" fill className="object-cover" />
               </div>
             </div>
           </div>

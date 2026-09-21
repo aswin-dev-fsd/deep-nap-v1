@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import UtilityBar from "./UtilityBar";
 import { PrimaryButton, WhatsAppButton } from "./Buttons";
+import SearchOverlay from "./SearchOverlay";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
@@ -59,6 +61,13 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-space-sm">
+            <button 
+              onClick={() => setIsSearchOpen(true)}
+              className="p-2 text-primary hover:bg-black/5 rounded-full transition-colors flex items-center justify-center"
+              aria-label="Search"
+            >
+              <span className="material-symbols-outlined text-[24px]">search</span>
+            </button>
             <div className="hidden sm:block">
               <WhatsAppButton />
             </div>
@@ -113,6 +122,12 @@ export default function Header() {
           </div>
         </div>
       )}
+
+      {/* Search Overlay */}
+      <SearchOverlay 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+      />
     </header>
   );
 }

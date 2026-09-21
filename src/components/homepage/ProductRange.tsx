@@ -60,7 +60,7 @@ export default function ProductRange() {
                 <span>·</span>
                 <span>Warranty <strong className="text-primary">20 yrs</strong></span>
               </div>
-              <Link href="#" className="font-label-nav text-label-nav text-primary hover:text-navy-deep font-semibold underline underline-offset-4 decoration-hairline hover:decoration-primary">
+              <Link href="/mattresses?type=Latex" className="font-label-nav text-label-nav text-primary hover:text-navy-deep font-semibold underline underline-offset-4 decoration-hairline hover:decoration-primary">
                 Enquire
               </Link>
             </div>
@@ -88,7 +88,7 @@ export default function ProductRange() {
                 <span>·</span>
                 <span>Warranty <strong className="text-primary">15 yrs</strong></span>
               </div>
-              <Link href="#" className="font-label-nav text-label-nav text-primary hover:text-navy-deep font-semibold underline underline-offset-4 decoration-hairline hover:decoration-primary">
+              <Link href="/mattresses?type=Pocket+spring" className="font-label-nav text-label-nav text-primary hover:text-navy-deep font-semibold underline underline-offset-4 decoration-hairline hover:decoration-primary">
                 Enquire
               </Link>
             </div>
@@ -116,7 +116,7 @@ export default function ProductRange() {
                 <span>·</span>
                 <span>Warranty <strong className="text-primary">10 yrs</strong></span>
               </div>
-              <Link href="#" className="font-label-nav text-label-nav text-primary hover:text-navy-deep font-semibold underline underline-offset-4 decoration-hairline hover:decoration-primary">
+              <Link href="/mattresses?type=Orthopaedic" className="font-label-nav text-label-nav text-primary hover:text-navy-deep font-semibold underline underline-offset-4 decoration-hairline hover:decoration-primary">
                 Enquire
               </Link>
             </div>

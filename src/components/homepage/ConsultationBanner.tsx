@@ -31,7 +31,7 @@ export default function ConsultationBanner() {
             Or book a home visit: an advisor can bring physical foam, latex and fabric samples to your house anywhere in Coimbatore.
           </p>
           <div className="pt-space-xs">
-            <PrimaryButton href="#">
+            <PrimaryButton href="/book-consultation">
               Book a consultation
             </PrimaryButton>
           </div>

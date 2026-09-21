@@ -17,7 +17,7 @@ export default function SupportCards() {
               Answer four questions about how you sleep, we shortlist from 13 types.
             </p>
           </div>
-          <PrimaryButton href="#" className="shrink-0">
+          <PrimaryButton href="/quiz" className="shrink-0">
             Start the quiz
           </PrimaryButton>
         </div>
@@ -50,8 +50,8 @@ export default function SupportCards() {
               </div>
             </div>
             <div className="pt-6 mt-6 border-t border-hairline">
-              <Link href="#" className="font-label-nav text-label-nav text-primary font-semibold hover:underline">
-                View Soft Mattresses →
+              <Link href="/mattresses?firmness=Soft" className="font-label-nav text-label-nav text-primary font-semibold hover:underline">
+                View Soft Mattresses &rarr;
               </Link>
             </div>
           </div>
@@ -84,8 +84,8 @@ export default function SupportCards() {
               </div>
             </div>
             <div className="pt-6 mt-6 border-t border-hairline">
-              <Link href="#" className="font-label-nav text-label-nav text-primary font-semibold hover:underline">
-                View Medium Firm Models →
+              <Link href="/mattresses?firmness=Medium" className="font-label-nav text-label-nav text-primary font-semibold hover:underline">
+                View Medium Firm Models &rarr;
               </Link>
             </div>
           </div>
@@ -115,8 +115,8 @@ export default function SupportCards() {
               </div>
             </div>
             <div className="pt-6 mt-6 border-t border-hairline">
-              <Link href="#" className="font-label-nav text-label-nav text-primary font-semibold hover:underline">
-                View Orthopaedic Models →
+              <Link href="/mattresses?type=Orthopaedic" className="font-label-nav text-label-nav text-primary font-semibold hover:underline">
+                View Orthopaedic Models &rarr;
               </Link>
             </div>
           </div>

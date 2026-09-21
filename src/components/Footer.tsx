@@ -72,11 +72,13 @@ export default function Footer() {
               Help
             </div>
             <ul className="space-y-2.5 font-label-nav text-label-nav text-secondary-fixed/80">
-              <li><Link className="hover:text-surface-white transition-colors" href="#">FAQ</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/faq">FAQ</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="/warranty">Warranty Registration</Link></li>
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Delivery & Installation</Link></li>
-              <li><Link className="hover:text-surface-white transition-colors" href="#">Care Guide</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/returns">Returns & Refunds</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/guide">Sleep Guide (Blog)</Link></li>
               <li><Link className="hover:text-surface-white transition-colors" href="/b2b">Bulk & Institutional Orders</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/privacy">Privacy Policy</Link></li>
+              <li><Link className="hover:text-surface-white transition-colors" href="/terms">Terms & Conditions</Link></li>
             </ul>
           </div>
           
@@ -108,7 +110,7 @@ export default function Footer() {
             <span className="material-symbols-outlined text-tertiary-fixed-dim">map</span>
             <span>Workshop & Experience Facility: Chinniyampalayam, Coimbatore (NH 544 Airport Bypass)</span>
           </div>
-          <Link className="text-tertiary-fixed-dim hover:text-surface-white font-label-nav text-label-nav shrink-0 transition-colors" href="#">
+          <Link className="text-tertiary-fixed-dim hover:text-surface-white font-label-nav text-label-nav shrink-0 transition-colors" href="/visit">
             View Map & Timings →
           </Link>
         </div>

@@ -6,13 +6,14 @@ This document tracks all completed features, components, and pages built in the 
 - **Framework:** Next.js 15 (App Router)
 - **Styling:** Tailwind CSS v4, custom design tokens matching the brand (Primary/Navy, Sand, Ink).
 - **Fonts:** Plus Jakarta Sans (Headings), Inter (Body).
-- **Data Models:** Mock databases created for `products.ts` (13 mattresses) and `cots.ts` (5 furniture pieces).
+- **Data Models:** Mock databases created for `products.ts` (13 mattresses), `cots.ts` (5 furniture pieces), `articles.ts` (5 sleep guide articles), `faq.ts` (FAQ questions & categories), and `warranties.ts` (warranty computation).
 
 ## 2. Reusable Components
-- **Header & Navigation:** Responsive navbar with mobile drawer, top utility bar. Links correctly route to collection and feature pages.
-- **Footer:** Brand-aligned footer with working shop deep-links and contact information.
+- **Header & Navigation:** Responsive navbar with mobile drawer, top utility bar, and search trigger.
+- **Footer:** Brand-aligned footer with working shop deep-links, policy links, and contact information.
 - **ConditionalLayout:** Layout wrapper providing flexible header/footer injection and route-based conditional wrappers.
-- **Buttons:** Custom `PrimaryButton` and `WhatsAppButton` implementations.
+- **SearchOverlay:** Full-screen instant search across mattresses, diwan cots, and guide articles.
+- **Buttons:** Custom `PrimaryButton`, `SecondaryButton`, and `WhatsAppButton` implementations.
 - **ProductConfigurator:** Complex client-side pricing calculator for mattresses. Handles custom dimensions (LxW), standard sizes, and thickness permutations.
 - **CotConfigurator:** Furniture-specific variant selector handling wood finishes (image swatches), storage options, and installation fees.
 - **QuoteForm:** Structured form capturing customized specifications and forwarding formatted order inquiries via WhatsApp.
@@ -22,7 +23,7 @@ This document tracks all completed features, components, and pages built in the 
 ## 3. Completed Pages & Flows
 
 ### Homepage (`/`)
-- Hero section, trust badges, featured product carousel, and a "Design your own size" call-to-action.
+- Hero section, trust badges, featured product carousel, support cards, custom size builder, consultation banner, reviews, bulk banner, and "Visit Us" sections.
 
 ### Mattress Collection (`/mattresses`)
 - Dynamic grid displaying 13 products.
@@ -60,8 +61,8 @@ This document tracks all completed features, components, and pages built in the 
 - **Layout Override:** Uses `ConditionalLayout.tsx` to strip out the global Header and Footer, providing a distraction-free, full-screen wizard experience.
 - **State Machine:** Client-side React state tracking 5 steps (Who is it for, Sleep Position, Concerns, Firmness, Size).
 - **Interactive UI:** Large tappable cards utilizing Material Symbols for iconography and visual feedback on selection.
-- **Recommendation Engine:** A heuristic scoring algorithm that reads the user's answers and assigns weighted points to all 13 mattresses in the `products.ts` database (e.g. 'Back pain' boosts Ortho models, 'Sleep hot' boosts Latex/Coir).
-- **Results Screen:** Dynamically generates text explaining *why* a mattress was chosen, displays the top 3 matches, and features a CTA that formats all preferences and recommendations into a pre-filled WhatsApp lead-capture message.
+- **Recommendation Engine:** A heuristic scoring algorithm that reads the user's answers and assigns weighted points to all 13 mattresses in the `products.ts` database.
+- **Results Screen:** Dynamically generates text explaining *why* a mattress was chosen, displays top 3 matches, and features a CTA that formats all preferences and recommendations into a pre-filled WhatsApp message.
 
 ### Bulk & Institutional Orders (`/b2b`)
 - Institutional page for hotels, hostels, hospitals, builders, and designers.
@@ -77,7 +78,25 @@ This document tracks all completed features, components, and pages built in the 
 
 ### Visit the Unit & Showroom (`/visit`)
 - Directions, hours, and interactive Google Maps embed for the Chinniyampalayam factory.
-- Direct booking form for scheduled factory visits.
+- Direct booking form for scheduled factory visits with photography of actual facilities.
+
+### Warranty Registration (`/warranty`)
+- Single-column layout for post-purchase warranty registration.
+- Uses `src/data/warranties.ts` to calculate warranty duration based on core type dynamically.
+- Dynamic confirmation screen with computed end dates.
+
+### Sleep Guide & Blog (`/guide` & `/guide/[slug]`)
+- Features 5 full, localized sleep advice articles in `src/data/articles.ts`.
+- Grid layout for index page, and dynamic `/guide/[slug]` article reader with custom markdown formatting.
+
+### FAQ & Policies (`/faq`, `/returns`, `/privacy`, `/terms`)
+- Categorized FAQ page with live search and sticky sidebar.
+- Standalone, plain-English D2C policy pages.
+
+### Global Search & Edge States
+- **SearchOverlay:** Full-screen modal with instant debounced multi-category query filtering.
+- **404 Not Found (`/not-found.tsx`):** Custom branded error page.
+- **Global Loading Skeleton (`/loading.tsx`):** Smooth transition skeleton layout.
 
 ---
 *Document last updated: September 21, 2026*

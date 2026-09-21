@@ -3,7 +3,27 @@
 All notable changes to the Deep Nap project will be documented in this file.
 
 ## [2026-09-21]
+
 ### Added
+- **Global Search & Edge Cases (Phase 14):**
+  - Built `SearchOverlay.tsx` for real-time client-side searching across mattresses, diwan cots, and sleep guide articles.
+  - Integrated global search modal trigger in `Header.tsx`.
+  - Built custom `not-found.tsx` 404 error page adhering to Navy/Cream brand identity.
+  - Built global `loading.tsx` skeleton layout to eliminate layout shifting during page transitions.
+- **FAQ & Policy Pages (Phase 13):**
+  - Created `src/data/faq.ts` dataset.
+  - Built interactive `/faq` page with categorized accordions, live search, and sticky category sidebar.
+  - Built plain-English, D2C policy pages: `/returns`, `/privacy`, and `/terms`.
+- **Sleep Guide & Blog (Phase 12):**
+  - Created `src/data/articles.ts` containing 5 localized sleep advice articles.
+  - Built `/guide` index page with featured article and responsive card grid.
+  - Built `/guide/[slug]` dynamic article route with custom markdown and blockquote rendering.
+- **Warranty Registration (Phase 11):**
+  - Built `/warranty` registration page with dynamic duration calculation based on mattress core type (`src/data/warranties.ts`).
+  - Implemented dynamic confirmation UI displaying calculated warranty expiration dates.
+- **Visit Page Refinements (Phase 10):**
+  - Updated `/visit` with high-quality interior and factory photography.
+  - Configured `next.config.ts` remote patterns for Unsplash image optimization.
 - **B2B & Institutional Orders Vertical (Phase 7):**
   - Built `/b2b` institutional procurement page tailored for hotels, hostels, hospitals, builders, and designers.
   - Implemented `B2BForm` capturing organization details, buyer type, quantity, size schedules, and forwarding formatted BOQ inquiries to WhatsApp.
@@ -39,6 +59,15 @@ All notable changes to the Deep Nap project will be documented in this file.
 - **Layout & Navigation:**
   - Added `ConditionalLayout` wrapper component to support conditional navigation layouts.
   - Connected navigation links in Header and Footer across all routes.
+
+### Fixed
+- **Dead Link Remediation (Codebase Audit):**
+  - Mapped 'Get a quote', 'Book a store visit', and 'Compare' on Hero to `/mattresses`, `/visit`, and `/compare`.
+  - Mapped 'Start the quiz' and firmness links on SupportCards to `/quiz` and parameterized mattress routes (`/mattresses?firmness=Soft`).
+  - Mapped 'Enquire' links on ProductRange to parameterized mattress routes (`/mattresses?type=Latex`).
+  - Mapped Consultation, Bulk, and Visit banners directly to their respective forms.
+  - Converted `/warranty` form tooltip from a jumping anchor tag to an inert button.
+  - Fixed missing `image` property mapping for Diwan Cots in `SearchOverlay.tsx`.
 
 ## [2026-09-19]
 ### Added

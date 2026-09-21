@@ -25,10 +25,10 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex flex-wrap items-center gap-space-md pt-space-xs">
-            <PrimaryButton href="#">
+            <PrimaryButton href="/mattresses">
               Get a quote
             </PrimaryButton>
-            <SecondaryButton href="#">
+            <SecondaryButton href="/visit">
               Book a store visit
             </SecondaryButton>
           </div>
@@ -89,7 +89,7 @@ export default function Hero() {
               <span className="font-title-card text-title-card text-primary font-semibold">
                 Enquire for price
               </span>
-              <Link href="#" className="font-label-nav text-label-nav text-primary hover:text-navy-deep font-semibold underline underline-offset-4 decoration-hairline hover:decoration-primary">
+              <Link href="/compare" className="font-label-nav text-label-nav text-primary hover:text-navy-deep font-semibold underline underline-offset-4 decoration-hairline hover:decoration-primary">
                 Compare
               </Link>
             </div>

@@ -95,7 +95,7 @@ export default function WarrantyPage() {
                 <div className="flex flex-col gap-1">
                   <div className="flex justify-between items-end">
                     <label className="font-label-form text-slate text-sm">Invoice number</label>
-                    <a href="#" className="font-caption text-primary hover:underline" title="Usually found at the top right of your receipt">where do I find this?</a>
+                    <button type="button" onClick={(e) => e.preventDefault()} className="font-caption text-primary hover:underline" title="Usually found at the top right of your receipt">where do I find this?</button>
                   </div>
                   <input 
                     required
