@@ -2,6 +2,27 @@
 
 All notable changes to the Deep Nap project will be documented in this file.
 
+## [2026-09-24]
+
+### Added & Changed
+- **Brand Identity 2026 Alignment:**
+  - Integrated `Deep Nap Brand Identity.pdf` specifications.
+  - Migrated primary brand font across headings and body to **Poppins** (`weights: 400, 500, 600, 700, 800`) via `next/font/google`.
+  - Updated color palette: Primary & Deep Navy (`#05253E`), Cream/Surface (`#F4F1ED`), and added Accent Teal (`#2DB1B5`) & Accent Blue (`#7DBCCE`).
+  - Increased headline weights (`display-hero` and `headline-lg` to 800 ExtraBold).
+  - Added placeholders/developer notes in `Header.tsx` and `Footer.tsx` for upcoming 3-layer wave brand SVG logo assets.
+  - Generated comprehensive client asset checklist docs (`docs/client-data-checklist.md` and `docs/client-data-checklist-by-page.md`).
+- **Homepage Structure & Narrative:**
+  - Swapped section order: moved `CustomSizeBuilder` immediately below `TrustStrip` to anchor on bespoke manufacturing earlier in the user journey.
+  - Refined background contrast rhythm (`CustomSizeBuilder` on white, `SupportCards` on cream).
+
+## [2026-09-23]
+
+### Changed
+- **Firmness Scale UI (Homepage):**
+  - Upgraded range slider track to feature a dynamic `linear-gradient` fill expanding with the slider value in deep navy.
+  - Darkened descriptive labels below the slider to Navy medium weight for improved contrast and readability.
+
 ## [2026-09-21]
 
 ### Added
@@ -85,6 +106,6 @@ All notable changes to the Deep Nap project will be documented in this file.
 ### Added
 - **Foundation & Homepage (Phase 1):**
   - Initialized Next.js project with Tailwind CSS v4.
-  - Configured design tokens, fonts (Plus Jakarta Sans, Inter), and core color palette.
+  - Configured design tokens, fonts, and core color palette.
   - Built reusable UI pieces: Navbar, Footer, Buttons.
   - Built the Homepage (`/`) with Hero, value propositions, and featured products grid.

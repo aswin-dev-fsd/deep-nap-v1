@@ -1,0 +1,155 @@
+# Client Data Checklist — By Category
+
+**Purpose:** Everything currently placeholder/mock in the Deep Nap site that needs real data from the client before launch. Send this file directly to the client as a fill-in-the-blanks request.
+
+**Legend:**
+- 🔴 **Critical** — blocks launch (fake/legal-risk data, broken trust signals, non-functional claims)
+- 🟡 **Later** — can go live with placeholder and be swapped in afterward without re-launching
+
+---
+
+## 1. Images 🔴
+
+| Item | Needed | Currently |
+|---|---|---|
+| Product photography — 13 mattresses | Real photos per product (min. 1 hero + 3 detail/lifestyle shots each) | All 13 use one shared stock image `placeholder-mattress.jpg` |
+| Product photography — 5 diwan cots | Real photos per cot (same as above) | Same shared stock image reused |
+| Logo (header + footer) | A real logo file (SVG/PNG, transparent background) | A full lifestyle photo is being used as the "logo" |
+| Homepage hero image | Real hero photo | AI-generated placeholder (Google-hosted, not owned by you) |
+| "Find the right support" firmness cards (3 images) | Real photos | AI-generated placeholders |
+| "The range" product cards (3 images) | Real photos | AI-generated placeholders |
+| Consultation banner photo | Real bedroom/lifestyle photo | AI-generated placeholder |
+| "Visit Us" map-area background photo | Real storefront/unit photo | AI-generated placeholder |
+| Manufacturing page — hero + 5 process-step photos + 5 raw-material photos (11 images) | Real photos of your actual production process | Every single one is the same one placeholder image repeated |
+| B2B page hero background | Real photo (warehouse/bulk delivery/institutional setting) | AI-generated placeholder |
+| Book-consultation "material samples" grid (4 images) | Real swatch/material photos | Same placeholder repeated 4x |
+| Sleep Guide articles — 5 article images | Real or licensed images per article | Same placeholder image reused for all 5 |
+| Team/founder photos (Manufacturing page) | Real headshots, 4 people | Icon avatars with literal text "Founder Name" / "Name" |
+| Visit-us facility photos (4: shop interior, materials, factory, custom beds) | Real photos of your actual Chinniyampalayam unit | Unrelated Unsplash stock photos |
+| B2B institutional client logos | Real logos + permission to display, for: "The Residency", "PSG Hospitals", "KGISL Infrastructure", "Kumaraguru College" (confirm these are real clients) | Text-only placeholder names, explicitly marked as placeholder in the code |
+| Favicon / browser tab icon | Confirm brand-specific icon is final | Exists but not verified as branded |
+| Social share preview image (Open Graph) | One 1200×630px branded image for link previews (WhatsApp/social shares) | None exists |
+| Leftover default Next.js icons in `/public` | Can be deleted, no client input needed | `file.svg`, `globe.svg`, `next.svg`, `vercel.svg`, `window.svg` — unused scaffold files |
+
+---
+
+## 2. Prices & Pricing Formulas 🔴
+
+| Item | Needed | Currently |
+|---|---|---|
+| Per-product base price ("From ₹X") — all 13 mattresses | Confirmed real starting prices | Invented placeholder values (e.g. ₹24,600 / ₹11,200 / ₹4,000) |
+| Per-product base price + installation charge — all 5 diwan cots | Confirmed real values | Invented placeholder values |
+| **Custom-size mattress pricing formula** | Your actual costing formula (rate per material/thickness, or however you price custom mattresses) | Code uses a guessed formula: `Length × Width × Thickness × 0.76`, explicitly labeled in code as a guess, not client-provided |
+| **Custom cot pricing formula** | Your actual costing logic | Code uses a placeholder mock formula, labeled in code as "just a mock formula for the UI demo" |
+| **Standard mattress thickness upcharge** | Real price-per-inch-of-thickness rule | Code guesses ₹1,200 per inch above 4", labeled in code as a demo placeholder |
+| GST rate | Confirm the rate so it can be shown/calculated correctly | Site only says "prices are inclusive of GST" with no rate specified anywhere |
+| Delivery/shipping cost logic | Real rule: is it really free within Coimbatore district? What's the "nominal fuel charge" for other districts — flat fee, per-km, per-pincode tiers? | Only vague prose claims exist; no actual calculator behind the "Delivery & Installation Check" PIN box (which currently does nothing when clicked) |
+| EMI terms | Provider name, tenure options, interest/no-cost terms | Site claims "No-cost EMI available in store" with zero supporting detail anywhere |
+| Bulk/B2B pricing tiers | Actual discount tiers (e.g. 10-24 units = X% off, 25+ = Y% off) | Only "Bulk pricing tiers begin at 10+ units" is stated — no tier table exists |
+
+---
+
+## 3. Contact Details 🔴
+
+| Item | Needed | Currently |
+|---|---|---|
+| Business phone/WhatsApp number | Confirm `+91 96008 89334` is the correct, live, monitored number (used in 19 files, 33 places — a single point of failure if wrong) | This one number, unverified |
+| Business email address | A real email address for the footer/contact forms | **None exists anywhere on the site** — no email is shown or collected |
+| Physical address | Confirm "Irugur Road, Chinniyampalayam, Coimbatore, Tamil Nadu 641062" is exact and current | Used sitewide, unverified |
+| Google Maps business listing | A real Google Business Profile / Maps "place" link | Map uses a generic lat/long pin; "Get Directions" and "Review us on Google" links currently just go to the generic `google.com` / `maps.google.com` homepage, not your actual listing |
+| Business hours | One confirmed, consistent set of operating hours | Currently inconsistent across pages — footer says "9am–10pm daily," but the two booking forms use two different sets of time slots (10am–1pm/1–5pm/5–9pm vs. 9am–1pm/1–5pm/5–10pm) |
+| Social media links (Instagram, Facebook, YouTube, etc.) | Links if you want them shown | None exist on the site currently |
+| Google review count/rating | Real current rating + review count | Site shows conflicting numbers in different places: "4.6 stars, 62 reviews" in most spots, but "4.8 stars, 34 reviews" in the product configurators |
+| Customer testimonials | Real customer names (with permission) + real quotes, ideally sourced from actual Google/WhatsApp reviews | 3 testimonials on the homepage are fabricated names/quotes ("Karthik S., RS Puram" etc.) |
+
+---
+
+## 4. Product Data 🟡 (structure is 🔴 if launching with real catalog)
+
+| Item | Needed | Currently |
+|---|---|---|
+| Full product list — mattresses | Confirm the real 13 (or however many) SKUs: names, materials, firmness, dimensions/sizes offered, "best for" positioning, build/lead time | All 13 are invented placeholder catalog entries |
+| Full product list — diwan cots | Same as above for the 5 cots | All 5 are invented placeholder entries |
+| SKU/product codes | If you track SKUs internally, provide them | No SKU field exists in the data model at all |
+| Warranty terms per product/material | Confirm real warranty years per material type | Placeholder years exist and are **inconsistent** between two files — e.g. "Natural Latex" shows 20 years in the product list but 10 years in the warranty-lookup table |
+| Homepage "The range" 3 featured products | Confirm which 3 real products should be featured | Currently hardcodes 3 product names that don't match any real product in the catalog at all (disconnected placeholder content) |
+| Certifications | Certificate number, issuing body, date, if you want "ISO 9001:2015 certified" claimed | Currently claimed with no supporting reference |
+
+---
+
+## 5. Policies (Legal Text) 🔴
+
+| Item | Needed | Currently |
+|---|---|---|
+| Terms & Conditions | Legal sign-off/edits on: 14-day quote validity, 10–20% advance token, 2–4 day delivery (7-day peak), 24-hour cancellation window, ±0.5" size tolerance | AI-drafted placeholder text, not reviewed by client or a lawyer |
+| Privacy Policy | Legal sign-off/edits | AI-drafted placeholder text |
+| Returns/Refund Policy | Confirm: 3-day return window, and the exact pickup/logistics fee amount (currently unspecified) | AI-drafted placeholder text |
+| Warranty Policy | Legal sign-off/edits | AI-drafted placeholder text |
+| "Last updated" date | Real effective date | All four policy pages currently share the same placeholder date (Sept 1, 2026) |
+| Registered legal entity name | e.g. "Deep Nap Mattresses Pvt. Ltd." / proprietorship name, for the legal footer and invoices | Only the trading name "Deep Nap" is used anywhere |
+
+---
+
+## 6. FAQ Content 🟡
+
+| Item | Needed | Currently |
+|---|---|---|
+| Verify all 13 FAQ answers | Confirm accuracy of specific claims: custom lead time (currently "3 days"), COD availability, delivery windows, warranty claim process, return logistics fee deduction, bulk order process | Written as real, specific content but not verified against Terms/Returns pages — some numbers appear inconsistent between FAQ and Terms (e.g. general delivery says "2–4 working days" vs. custom-size FAQ also saying "2–4 working days" — confirm these are meant to be the same) |
+
+---
+
+## 7. Manufacturing / About / Team 🔴 (team section) / 🟡 (process copy)
+
+| Item | Needed | Currently |
+|---|---|---|
+| Team/founder names, roles, bios | Real names and 1-line bios for 4 team members | Literally placeholder text: "Founder Name" / "Name" / "Name" / "Name" |
+| "How it's made" process copy (5 steps) | Confirm/correct against your actual production process | Detailed but unverified placeholder narrative |
+| Raw material sourcing claim | Confirm "sourced from trusted Kerala estates" and name the actual supplier(s) if you want it named | Currently a generic unverified claim |
+| ISO 9001:2015 certification | Certificate reference number/date (see Product Data section above) | Claimed with no backing reference |
+
+---
+
+## 8. B2B / Bulk Orders 🟡
+
+| Item | Needed | Currently |
+|---|---|---|
+| Bulk pricing tiers | Real tier structure (see Prices section) | Not defined |
+| Minimum order quantity | Confirm "10+ units" is the real MOQ | Only value currently in code |
+| Institutional client logos/names | Real, permissioned client names for social proof (see Images section) | Placeholder institution names |
+| Dedicated B2B/institutional sales contact | A separate phone/email if you want one, or confirm the retail number is fine | Currently reuses the same retail WhatsApp number despite copy saying "speak directly to our institutional sales lead" |
+
+---
+
+## 9. SEO & Metadata 🟡
+
+| Item | Needed | Currently |
+|---|---|---|
+| Per-page titles & meta descriptions | Final copy for each page (home, mattresses, diwan cots, B2B, quiz, compare, FAQ, manufacturing, visit, consultation, custom-size) | Most pages have no page-specific title/description — they'll all show the generic homepage title in search results and browser tabs |
+| Social share image (Open Graph) | See Images section | None exists |
+| Sitemap/robots.txt | No client input needed — technical, but flagging that it doesn't exist yet | Missing |
+
+---
+
+## 10. Legal / Business Registration 🔴
+
+| Item | Needed | Currently |
+|---|---|---|
+| **GSTIN** | Your real registered GSTIN | `33AAAAA0000A1Z5` — this is a textbook dummy/example GSTIN pattern, not a real number. **Must be replaced before launch.** |
+| Registered company name | See Policies section | Not provided |
+| PAN / CIN / Udyam-MSME registration (if applicable) | Provide if you want these listed | Not present anywhere |
+| Copyright year/entity in footer | Confirm correct current year and legal entity | Currently reads "© 2025 Deep Nap Mattress" |
+
+---
+
+## 11. Decisions Needed (not data, but choices) 🟡
+
+| Item | Decision needed |
+|---|---|
+| Analytics | Do you want Google Analytics / Meta Pixel / GTM installed? None is configured currently. |
+| Payment gateway | Site currently states no online payments are accepted (WhatsApp-quote-only checkout). Confirm this is intentional, or provide gateway details if you want online payment. |
+| WhatsApp Business API | Current WhatsApp integration is just `wa.me` links (manual replies). Confirm this is sufficient, or provide WhatsApp Business API access if you want automated responses/chatbot. |
+| Google Maps API | Current map is a free embed (no API key needed). Confirm this is sufficient, or provide a Maps API key if you want richer map features (live directions, custom styling). |
+
+---
+
+*Generated from a full codebase audit on 2026-09-23. See [client-data-checklist-by-page.md](client-data-checklist-by-page.md) for the same items organized by site page, with file references for the dev team.*

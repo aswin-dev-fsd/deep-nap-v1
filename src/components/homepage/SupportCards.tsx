@@ -5,7 +5,7 @@ import { PrimaryButton } from "../Buttons";
 
 export default function SupportCards() {
   return (
-    <section className="w-full bg-surface-white py-16 md:py-24 px-gutter md:px-gutter-tablet lg:px-gutter-desktop">
+    <section className="w-full bg-surface py-16 md:py-24 px-gutter md:px-gutter-tablet lg:px-gutter-desktop border-b border-hairline">
       <div className="max-w-[1280px] mx-auto flex flex-col space-y-12">
         {/* Heading row with Quiz action */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">

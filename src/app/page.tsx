@@ -15,8 +15,8 @@ export default function Home() {
       <div className="flex flex-col w-full">
         <Hero />
         <TrustStrip />
-        <SupportCards />
         <CustomSizeBuilder />
+        <SupportCards />
         <ProductRange />
         <ConsultationBanner />
         <Reviews />

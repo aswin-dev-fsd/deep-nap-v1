@@ -10,6 +10,10 @@ export default function Footer() {
           <div className="space-y-space-md">
             <div className="flex items-center gap-space-xs">
               <div className="relative h-8 w-8">
+                {/* 
+                  NOTE (2026 Brand Update):
+                  Placeholder logo. Replace with the new 3-layer wave SVG from the 2026 Brand Identity once available.
+                */}
                 <Image
                   alt="Deep Nap Mattress Logo"
                   className="object-contain brightness-0 invert"

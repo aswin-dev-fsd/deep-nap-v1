@@ -2,7 +2,7 @@ import React from "react";
 
 export default function UtilityBar() {
   return (
-    <div className="hidden lg:flex w-full bg-primary-container h-9 items-center justify-center">
+    <div className="hidden lg:flex w-full bg-navy-deep h-9 items-center justify-center">
       <div className="flex text-surface-white/70 font-label-form text-label-form items-center justify-between px-gutter-desktop max-w-[1280px] w-full">
         <span className="flex items-center gap-space-xs font-label-form text-label-form">
           <span className="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>

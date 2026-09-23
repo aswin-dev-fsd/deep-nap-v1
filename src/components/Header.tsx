@@ -14,7 +14,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-50">
       <UtilityBar />
       
-      <div className="bg-secondary-fixed/90 backdrop-blur-md border-b border-hairline shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+      <div className="bg-surface/90 backdrop-blur-md border-b border-hairline shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
         <div className="h-20 max-w-[1280px] mx-auto px-gutter md:px-gutter-tablet lg:px-gutter-desktop flex items-center justify-between gap-space-md">
           
           {/* Logo & Brand */}
@@ -30,6 +30,10 @@ export default function Header() {
 
             <Link href="/" className="flex items-center gap-space-md">
               <div className="relative h-16 w-48 sm:w-64">
+                {/* 
+                  NOTE (2026 Brand Update):
+                  Placeholder logo. Replace with the new 3-layer wave SVG from the 2026 Brand Identity once available.
+                */}
                 <Image
                   src="https://lh3.googleusercontent.com/aida/AEtjO1VyBxylK-3YX6ydgNoyvEM6k3-IYwrftv2b1w8EZrMNWwbDHEkLstP3lfwBQYP1yub851HDJgdj69RnCc64OvsOlfotAmwM0jeiG3r3KclvcXmNSot3s41ZFJkA9ARlDaOFKM6CiXAnoZ--JguVEs1FujkWc23g5XeMUT_lpDTLNShJWVF5bpfC9-QwBsj2RnpdQu3p6n7kbB65ZfiH0PV9rQCy9H-Rj2JXODC904x_wiaYDaSq-YvcUfWf"
                   alt="Deep Nap Mattress Logo"

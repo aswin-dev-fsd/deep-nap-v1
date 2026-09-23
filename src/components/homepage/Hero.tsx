@@ -6,11 +6,11 @@ import { PrimaryButton, SecondaryButton } from "../Buttons";
 
 export default function Hero() {
   return (
-    <section className="w-full bg-[#EFE5D7] py-12 md:py-16 lg:py-20 px-gutter md:px-gutter-tablet lg:px-gutter-desktop">
+    <section className="w-full bg-surface py-12 md:py-16 lg:py-20 px-gutter md:px-gutter-tablet lg:px-gutter-desktop">
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
         {/* Left Column (approx 55% / 7 cols) */}
         <div className="lg:col-span-7 flex flex-col space-y-space-md">
-          <span className="font-overline text-overline text-[#DCA544] tracking-widest uppercase">
+          <span className="font-overline text-overline text-accent-teal tracking-widest uppercase">
             MADE TO ORDER IN COIMBATORE
           </span>
           <h1 className="font-display-hero text-headline-lg md:font-display-hero md:text-display-hero text-primary tracking-tight leading-tight">
